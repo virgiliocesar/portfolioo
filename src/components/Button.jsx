@@ -1,16 +1,21 @@
 import { Link } from "react-router-dom";
 
-export const Button = ({ link, text }) => {
+export const Button = ({ to, link, text }) => {
   const handleClick = () => {
-    window.open(link, "_blank");
+    if (!to && link) {
+      window.open(link, "_blank");
+    }
   };
-  return <button onClick={handleClick}>{text}</button>;
-};
 
-export const Button2 = ({ to, text }) => {
-  return (
-    <Link to={to}>
-      <button>{text}</button>
-    </Link>
-  );
+  if (to) {
+    return (
+      <Link to={to}>
+        <button>{text}</button>
+      </Link>
+    );
+  } else if (link) {
+    return <button onClick={handleClick}>{text}</button>;
+  } else {
+    return null;
+  }
 };
