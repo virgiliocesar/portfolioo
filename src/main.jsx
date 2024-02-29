@@ -11,6 +11,7 @@ import About from './routes/About.jsx'
 import Skills from "./routes/Skills.jsx";
 import Projects from "./routes/Projects.jsx";
 import Contact from './routes/Contact.jsx'
+import ProjectsDetail from './routes/ProjectsDetail.jsx';
 
 
 
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
       {
         path: "/Projects",
         element: <Projects />,
+      },
+      {
+        path: "/ProjectsDetail",
+        element: <ProjectsDetail />,
       },
       {
         path: "/About",
