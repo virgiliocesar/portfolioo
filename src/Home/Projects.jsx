@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import { Button } from "../components/Button";
+// import { Link } from "react-router-dom";
+// import { Button } from "../components/Button";
 
 export const Projects = () => {
   const [projects, setProjects] = useState([]);
@@ -27,9 +27,12 @@ export const Projects = () => {
             <div>
               <img src={project.imagem} alt={`Projeto ${project.id}`} />
             </div>
-            <Button link={project.deploy} text="Deploy" />
+            <button>teste</button>
+            <button>teste</button>
+            <button>teste</button>
+            {/* <Button link={project.deploy} text="Deploy" />
             <Button to={`/Projects/${project.id}`} text="Detalhes" />
-            <Button link={project.github} text="Código" />
+            <Button link={project.github} text="Código" /> */}
           </div>
         ))}
     </div>
